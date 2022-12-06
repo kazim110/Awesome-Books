@@ -5,8 +5,8 @@ const books = [
     author: 'Yordi',
   },
   {
-    id: '1',
-    name: 'Harry Potter',
+    id: '2',
+    name: 'Life of hapiness',
     author: 'Yordi',
   },
 ];
@@ -18,6 +18,6 @@ function addBook() {
   const book = { name: nameInput.value, author: authorInput.value };
   books.push(book);
 }
-console.log(books);
+console.log(books[0],books[1]);
 
 addBtn.addEventListener('click', addBook);
