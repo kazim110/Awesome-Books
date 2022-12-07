@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+
 const books = JSON.parse(localStorage.getItem('books-array')) || [
   {
     title: 'Harry Potter',
@@ -35,10 +37,10 @@ function display() {
     bookAuthor.innerText = books[index].author;
 
     const removeBtn = document.createElement('button');
-    /* eslint-disable */
+
     removeBtn.setAttribute('onclick', `remove(${index})`);
     removeBtn.innerText = 'remove';
-    /* eslint-enable */
+
     const horizontal = document.createElement('hr');
     horizontal.style.color = 'grey';
 
