@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 const nameInput = document.getElementById('nameInput');
 const authorInput = document.getElementById('authorInput');
 const addBtn = document.querySelector('.add-btn');
