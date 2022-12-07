@@ -1,15 +1,15 @@
 /* eslint-disable no-unused-vars */
-
-const books = JSON.parse(localStorage.getItem('books-array')) || [
+const sample = [
   {
     title: 'Harry Potter',
     author: 'J. K. Rowling',
   },
   {
-    title: 'Science',
-    author: 'Teacher A',
+    title: 'The Great Gatsby',
+    author: 'F. Scott Fitzgerald',
   },
-];
+]
+const books = localStorage.getItem('books-array')==null?sample: JSON.parse(localStorage.getItem('books-array')) ;
 
 const addBtn = document.querySelector('.add-btn');
 const titleInput = document.querySelector('#nameInput');
@@ -19,8 +19,13 @@ const booksList = document.querySelector('.books-list');
 let index = 0;
 
 function remove(i) {
-  const bookTags = document.querySelectorAll('.book-tag');
+  var bookTags = booksList.querySelectorAll('.book-tag');
   booksList.removeChild(bookTags[i]);
+  bookTags = booksList.querySelectorAll('.book-tag');
+  console.log(bookTags,i)
+  for(i; i<bookTags.length; i+=1){
+    bookTags[i].querySelector('button').setAttribute('onclick',`remove(${i})`);
+  }
   books.splice(i, 1);
   localStorage.setItem('books-array', JSON.stringify(books));
 }
@@ -60,3 +65,4 @@ function addBook() {
 
 addBtn.addEventListener('click', addBook);
 display();
+
