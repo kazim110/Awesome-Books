@@ -26,7 +26,6 @@ window.onload = () => {
 function addBook() {
   const book = { name: nameInput.value, author: authorInput.value };
   loadedBooks.push(book);
-
   localStorage.setItem(storageKey, JSON.stringify(loadedBooks));
   loadBook();
 }
