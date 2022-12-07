@@ -18,11 +18,9 @@ let index = 0;
 
 function remove(i) {
   const bookTags = document.querySelectorAll('.book-tag');
-  console.log(bookTags, 'removed', bookTags[i]);
   booksList.removeChild(bookTags[i]);
   books.splice(i, 1);
   localStorage.setItem('books-array', JSON.stringify(books));
-  console.log('books and local storage AFTER REMOE', books, JSON.parse(localStorage['books-array']));
 }
 
 function display() {

@@ -18,6 +18,5 @@ function addBook() {
   const book = { name: nameInput.value, author: authorInput.value };
   books.push(book);
 }
-console.log(books[0], books[1]);
 
 addBtn.addEventListener('click', addBook);
