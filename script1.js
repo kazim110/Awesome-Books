@@ -3,7 +3,7 @@ const nameInput = document.getElementById('nameInput');
 const authorInput = document.getElementById('authorInput');
 const addBtn = document.querySelector('.add-btn');
 const storageKey = 'booksLocalData';
-const loadedBooks = JSON.parse(localStorage.getItem(storageKey)) ||[];
+const loadedBooks = JSON.parse(localStorage.getItem(storageKey)) || [];
 const bookslist = document.querySelector('.books-list');
 
 function loadBook() {
