@@ -1,4 +1,12 @@
 /* eslint-disable no-unused-vars */
+
+class Book {
+  constructor(title, author) {
+    this.name = title;
+    this.author = author;
+  }
+}
+
 const nameInput = document.getElementById('nameInput');
 const authorInput = document.getElementById('authorInput');
 const addBtn = document.querySelector('.add-btn');
@@ -25,7 +33,7 @@ window.onload = () => {
 };
 
 function addBook() {
-  const book = { name: nameInput.value, author: authorInput.value };
+  const book = new Book(nameInput.value, authorInput.value);
   loadedBooks.push(book);
   localStorage.setItem(storageKey, JSON.stringify(loadedBooks));
   loadBook();
