@@ -16,7 +16,7 @@ const bookslist = document.querySelector('.books-list');
 
 function loadBook() {
   bookslist.innerHTML = '';
-  if (loadedBooks != null) {
+  if (loadedBooks.length !== 0) {
     for (let i = 0; i < loadedBooks.length; i += 1) {
       bookslist.innerHTML += `<div class="book-info">
               <p>${loadedBooks[i].name}</p>
@@ -25,6 +25,20 @@ function loadBook() {
               <hr>
               </div>`;
     }
+  }
+  else {
+    const sample = [
+      {
+        name: 'Harry Potter',
+        author: 'J. K. Rowling',
+      },
+      {
+        name: 'The Great Gatsby',
+        author: 'F. Scott Fitzgerald',
+      },
+    ]
+    sample.forEach(favoriteBook => loadedBooks.push(favoriteBook));
+    loadBook()
   }
 }
 
