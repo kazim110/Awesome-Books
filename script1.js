@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+/* eslint-disable max-classes-per-file */
 
 class Book {
   constructor(title, author) {
