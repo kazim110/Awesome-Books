@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+/* eslint-disable max-classes-per-file */
 
 class Book {
   constructor(title, author) {
@@ -19,12 +20,11 @@ class UI {
     bookslist.innerHTML = '';
     if (loadedBooks !== null) {
       for (let i = 0; i < loadedBooks.length; i += 1) {
-        bookslist.innerHTML += `<div class="book-info">
-              <p>${loadedBooks[i].name}</p>
-              <p>${loadedBooks[i].author}</p>
-              <button class="remove-btn" id="btn-${i}" onclick="UI.deleteBook(${i})" value="remove">Remove</button>
-              <hr>
-              </div>`;
+        bookslist.innerHTML += `<tr class="book-info">
+              <td>
+              "${loadedBooks[i].name}" by ${loadedBooks[i].author} <button class="remove-btn btn btn-outline-primary" id="btn-${i}" onclick="UI.deleteBook(${i})" value="remove">Remove</button>
+              </td>
+              </tr>`;
       }
     } else {
       const sampleFav = [
