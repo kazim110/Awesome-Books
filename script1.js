@@ -15,6 +15,9 @@ const storageKey = 'booksLocalData';
 const loadedBooks = JSON.parse(localStorage.getItem(storageKey)) || null;
 const bookslist = document.querySelector('.books-list');
 
+const date = document.querySelector('.date');
+console.log(date)
+
 class UI {
   static loadBook() {
     bookslist.innerHTML = '';
@@ -58,6 +61,7 @@ class UI {
   }
 }
 window.onload = () => {
+  document.querySelector('.date').innerHTML = date;
   UI.loadBook();
 };
 
