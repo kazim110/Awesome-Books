@@ -10,7 +10,30 @@
     <script defer src="./script.js"></script>
 </head>
 <body>
+    
+    <nav class="nav-bg">
+        <div class="title">
+            <h3>Awesome Books</h3>
+        </div>
+        <div class="nav-list">
+            <ul>
+                <a href="#" class="list"><li>List</li></a>  
+                <li><div class="line"></div></li>
+                <a href="#" class="add"><li>Add new</li></a>  
+                <li><div class="line"></div></li>
+                <a href="#" class="contactmenu"><li>Contact</li></a>         
+                </ul>
+        </div>      
+    </nav>
+    <p class="date-time">LAKJf</p>
     <main>
+        <div class="book-list">
+            <h2>AWESOME BOOKS</h2>
+            <div class="books-list"> <!-- js file goes here --></div>
+            <p class="no-books">No books here for now</p>
+        </div>
+        
+        <div class="book-add">
         <h1 class="display-4 text-center">Awesome Books</h1>
         <table class="table table-striped">
             <tbody class="books-list"></tbody>
@@ -22,6 +45,21 @@
                 <input id="authorInput" placeholder="Author" type="text" class="input">
                 <button class="add-btn btn btn-outline-primary" type="submit">Add</button>
         </div>
+        </div>
+
+        <div class="book-contact">
+            <h2>Contact information</h2>
+            <h3>Do have any questions or you just want to say "Hello"? You can reach out to us!</h3>
+        
+            <ul>
+              <li>Our e-mail: anemail@m=gail.com</li>
+              <li>Our phone number: 0043586534422</li>
+              <li>Our address: street name number S20, 1000 Addis Ababa, Ethiopia</li>
+            </ul>
+        </div>
     </main>
+    <footer>
+        <p>©microverse 2022, Awesome Books | All Rights Reserved</p>
+    </footer>
 </body>
 </html>
