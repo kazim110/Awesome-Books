@@ -9,17 +9,53 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <header>
+        <nav class="navbar navbar-expand navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Awesome Books</a>
+              <div class="collapse navbar-collapse" id="navbarColor03">
+                <ul class="navbar-nav me-auto nav-ul">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#">List
+                      <span class="visually-hidden">(current)</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Add New</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
     <main>
-        <h1 class="display-4 text-center">Awesome Books</h1>
-        <table class="table table-striped">
-            <tbody class="books-list"></tbody>
-        </table>
-        <hr class="hr">
-        <h2>Add New Book</h2>
-        <div class="book-input">
+        <div class="all-awesome-books">
+            <h1 class="display-4 text-center">All Awesome Books</h1>
+            <table class="table table-striped">
+                <tbody class="books-list"></tbody>
+            </table>
+        </div>
+        <div class="add-awesome-books">
+            <h2>Add New Book</h2>
+            <div class="book-input">
                 <input id="nameInput" placeholder="Title" type="text" class="input">
                 <input id="authorInput" placeholder="Author" type="text" class="input">
                 <button class="add-btn btn btn-outline-primary" type="submit">Add</button>
+            </div>
+        </div>
+        <div class="contact-awesome-books">
+            <h2>Contact information</h2>
+            <p>
+                Do have any questions or you just want to say "Hello"? You can reach out to us!
+            </p>
+            <ul>
+                <li>Our e-mail: anemail@gmail.com</li>
+                <li>Our phone number: 0043586534422</li>
+                <li>Our address: street name number S20, 1000 Addis Ababa, Ethiopia</li>
+            </ul>
         </div>
     </main>
     <script src="./script1.js"></script>
