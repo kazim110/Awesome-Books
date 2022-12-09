@@ -22,15 +22,14 @@ const showDateAndTime = document.querySelector('.date-here');
 const date = new Date();
 const time = date.toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
 
-console.log(document.querySelector('.book-list'))
-console.log(document.querySelector('.book-add'))
-console.log(document.querySelector('.book-contact'))
-
-
 class UI {
   static loadBook() {
     bookslist.innerHTML = '';
     if (loadedBooks !== null) {
+      if(loadedBooks === []){
+        console.log('is empty',document.querySelector('.no-books'));
+        document.querySelector('.no-books').style.display = 'block'
+      }
       for (let i = 0; i < loadedBooks.length; i += 1) {
         bookslist.innerHTML += `<tr class="book-info">
               <td>

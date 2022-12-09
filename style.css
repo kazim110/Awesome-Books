@@ -1,12 +1,6 @@
- 
-* {
-  margin: auto;
-}
-
 body {
   margin: 0;
 }
-
 
 .nav-bg {
   display: flex;
@@ -24,8 +18,9 @@ body {
   gap: 20px;
 }
 
-.date-time {
-  margin: 3rem 0 0 72rem;
+.date-here {
+  width: fit-content;
+  margin-left: 80%;
 }
 
 .nav-list ul a {
@@ -57,7 +52,7 @@ table {
 
 hr {
   width: 10%;
-  opacity: 1;
+  margin: auto;
 }
 
 .book-input {
@@ -83,7 +78,7 @@ button {
 
 .no-books {
   display: none;
-  margin-left: 40vh;
+  margin: auto;
 }
 
 footer {
