@@ -5,15 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Awesome Book</title>
+    <link rel="stylesheet" href="https://bootswatch.com/5/sketchy/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <main>
-        <h1>Awesome Books</h1>
-        <div class="books-list"></div>
+        <h1 class="display-4 text-center">Awesome Books</h1>
+        <table class="table table-striped">
+            <tbody class="books-list"></tbody>
+        </table>
+        <hr class="hr">
+        <h2>Add New Book</h2>
         <div class="book-input">
                 <input id="nameInput" placeholder="Title" type="text" class="input">
                 <input id="authorInput" placeholder="Author" type="text" class="input">
-                <button class="add-btn" type="submit">Add</button>
+                <button class="add-btn btn btn-outline-primary" type="submit">Add</button>
         </div>
     </main>
     <script src="./script1.js"></script>
