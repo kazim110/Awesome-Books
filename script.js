@@ -15,6 +15,10 @@ const storageKey = 'booksLocalData';
 const loadedBooks = JSON.parse(localStorage.getItem(storageKey)) || null;
 const bookslist = document.querySelector('.books-list');
 
+const listMenu = document.querySelector('.list');
+const addMenu = document.querySelector('.add');
+const contactMenu = document.querySelector('.contact');
+console.log(listMenu,addMenu,contactMenu)
 class UI {
   static loadBook() {
     bookslist.innerHTML = '';
@@ -49,6 +53,7 @@ class UI {
     UI.loadBook();
     nameInput.value = '';
     authorInput.value = '';
+    nameInput.focus();
   }
 
   static deleteBook(i) {
@@ -62,3 +67,22 @@ window.onload = () => {
 };
 
 addBtn.addEventListener('click', UI.addBook);
+
+
+listMenu.addEventListener('click', () => {
+  document.querySelector('.book-list').style.display = 'block';
+  document.querySelector('.book-add').style.display = 'none';
+  document.querySelector('.book-contact').style.display = 'none';
+});
+
+addMenu.addEventListener('click', () => {
+  document.querySelector('.book-list').style.display = 'none';
+  document.querySelector('.book-add').style.display = 'block';
+  document.querySelector('.book-contact').style.display = 'none';
+});
+
+contactMenu.addEventListener('click', () => {
+  document.querySelector('.book-list').style.display = 'none';
+  document.querySelector('.book-add').style.display = 'none';
+  document.querySelector('.book-contact').style.display = 'block';
+});
