@@ -15,8 +15,9 @@ const storageKey = 'booksLocalData';
 const loadedBooks = JSON.parse(localStorage.getItem(storageKey)) || null;
 const bookslist = document.querySelector('.books-list');
 
-const date = document.querySelector('.date');
-console.log(date)
+const date = new Date();
+const time = date.toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
+document.querySelector('.date').innerHTML = `${date.toDateString()}, ${time}`;
 
 class UI {
   static loadBook() {
