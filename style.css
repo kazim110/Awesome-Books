@@ -1,11 +1,41 @@
  
 * {
   margin: auto;
-  width: fit-content;
 }
-/* 
+
 body {
   margin: 0;
+}
+
+
+.nav-bg {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 90%;
+  padding: 10px 50px;
+  border: 2px solid;
+  margin-top: 20px;
+}
+
+.nav-list ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+.date-time {
+  margin: 3rem 0 0 72rem;
+}
+
+.nav-list ul a {
+  text-decoration: none;
+  color: black;
+}
+
+
+.nav-list ul a:hover {
+  color: slateblue;
 }
 
 main {
@@ -49,4 +79,17 @@ hr {
 
 button {
   box-shadow: 3px 7px #5f5f5f;
-} */
+} 
+
+.no-books {
+  display: none;
+  margin-left: 40vh;
+}
+
+footer {
+  bottom: 0;
+  width: 90vw;
+  border: 2px solid;
+  padding: 20px 0 20px 20px;
+  margin-bottom: 20px;
+}

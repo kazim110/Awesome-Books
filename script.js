@@ -18,7 +18,15 @@ const bookslist = document.querySelector('.books-list');
 const listMenu = document.querySelector('.list');
 const addMenu = document.querySelector('.add');
 const contactMenu = document.querySelector('.contact');
-console.log(listMenu,addMenu,contactMenu)
+const showDateAndTime = document.querySelector('.date-here');
+const date = new Date();
+const time = date.toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
+
+console.log(document.querySelector('.book-list'))
+console.log(document.querySelector('.book-add'))
+console.log(document.querySelector('.book-contact'))
+
+
 class UI {
   static loadBook() {
     bookslist.innerHTML = '';
@@ -63,6 +71,9 @@ class UI {
   }
 }
 window.onload = () => {
+  showDateAndTime.innerHTML = `${date.toDateString()}, ${time}`;
+  document.querySelector('.book-add').style.display = 'none';
+  document.querySelector('.book-contact').style.display = 'none';
   UI.loadBook();
 };
 
