@@ -45,6 +45,10 @@ table {
   flex: auto;
 }
 
+.nav-item a:hover{
+  color: rebeccapurple;
+}
+
 .all-awesome-books {
   width: 95%;
 }
