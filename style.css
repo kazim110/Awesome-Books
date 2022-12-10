@@ -85,6 +85,7 @@ button {
   border-style: solid;
   border-width: 2px;
   border-radius: 25px 25px 55px 5px/5px 55px 25px 25px;
+  padding: 5px;
 }
 
 .hide {
