@@ -5,6 +5,7 @@ body {
 }
 
 main {
+  min-height: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,12 +47,14 @@ table {
   flex: auto;
 }
 
-.nav-item a:hover{
+.nav-item a:hover {
   color: rgb(38, 207, 219);
 }
 
 .all-awesome-books {
   width: 95%;
+  flex-direction: column;
+  padding-top: 10px;
 }
 
 .add-awesome-books {
@@ -59,6 +62,7 @@ table {
   display: flex;
   flex-direction: column;
   text-align: center;
+  padding-top: 5%;
 }
 
 .contact-awesome-books {
@@ -66,18 +70,27 @@ table {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 5%;
 }
 
 .date {
- text-align: right;
+  text-align: right;
 }
 
 button {
-  box-shadow: 5px 10px #888888;
+  box-shadow: 5px 10px #888;
 }
 
 .footer {
   border-style: solid;
   border-width: 2px;
   border-radius: 25px 25px 55px 5px/5px 55px 25px 25px;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: flex;
 }

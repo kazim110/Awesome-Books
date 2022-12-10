@@ -15,6 +15,14 @@ const storageKey = 'booksLocalData';
 const loadedBooks = JSON.parse(localStorage.getItem(storageKey)) || null;
 const bookslist = document.querySelector('.books-list');
 
+// -----Nav Items
+const list = document.querySelector('.list-nav');
+const add = document.querySelector('.add-nav');
+const contact = document.querySelector('.contact-nav');
+const allBooks = document.querySelector('.all-awesome-books');
+const addBooks = document.querySelector('.add-awesome-books');
+const contactBooks = document.querySelector('.contact-awesome-books');
+
 const date = new Date();
 const time = date.toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
 document.querySelector('.date').innerHTML = `${date.toDateString()}, ${time}`;
@@ -64,10 +72,29 @@ class UI {
 window.onload = () => {
   document.querySelector('.date').innerHTML = date;
   UI.loadBook();
+  allBooks.classList.add('show');
+  addBooks.classList.add('hide');
+  contactBooks.classList.add('hide');
 };
 
 addBtn.addEventListener('click', UI.addBook);
 
 // ---------Navigation...........//
 
+list.addEventListener('click', () => {
+  allBooks.classList.replace('hide', 'show');
+  addBooks.classList.replace('show', 'hide');
+  contactBooks.classList.replace('show', 'hide');
+});
 
+add.addEventListener('click', () => {
+  addBooks.classList.replace('hide', 'show');
+  allBooks.classList.replace('show', 'hide');
+  contactBooks.classList.replace('show', 'hide');
+});
+
+contact.addEventListener('click', () => {
+  contactBooks.classList.replace('hide', 'show');
+  allBooks.classList.replace('show', 'hide');
+  addBooks.classList.replace('show', 'hide');
+});
